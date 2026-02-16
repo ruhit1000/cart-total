@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="max-w-5xl mx-auto my-5 flex gap-3">
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike</h2>
+                <p>200</p>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="card-actions items-center justify-between">
+                    <div class="quantity flex items-center">
+                        <button class="remove-item cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                        <p class="product-count border px-1">0</p>
+                        <button class="add-item cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button class="btn btn-primary">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Addidus</h2>
+                <p>300</p>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="card-actions items-center justify-between">
+                    <div class="quantity flex items-center">
+                        <button class="remove-item cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                        <p class="product-count border px-1">0</p>
+                        <button class="add-item cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button class="btn btn-primary">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Bata</h2>
+                <p>400</p>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="card-actions items-center justify-between">
+                    <div class="quantity flex items-center">
+                        <button class="remove-item cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                        <p class="product-count border px-1">0</p>
+                        <button class="add-item cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button class="btn btn-primary">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="max-w-5xl mx-auto my-5 border">
+        <!-- Headings -->
+        <div class="grid grid-cols-3 font-bold">
+            <h1>Product Name</h1>
+            <h1>Quantity</h1>
+            <h1>Price</h1>
+        </div>
+        <hr>
+        <div id="order-list">
+            
+        </div>
+        <div id="total-price" class="grid grid-cols-3">
+            <p>Total</p>
+            <p>0</p>
+            <p>0</p>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
