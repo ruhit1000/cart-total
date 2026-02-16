@@ -1,8 +1,8 @@
 const quantities = document.getElementsByClassName('quantity');
 for (const quantity of quantities) {
-    const removeItems = quantity.children[0];
-    const productQuantity = quantity.children[1];
-    const addItems = quantity.children[2];
+    const removeItems = quantity.querySelector('.remove-item');
+    const productQuantity = quantity.querySelector('.product-count');
+    const addItems = quantity.querySelector('.add-item');
 
     addItems.addEventListener('click', function () {
         let num = parseInt(productQuantity.innerText);
@@ -26,12 +26,13 @@ const totalQuantityContainer = [];
 const priceContainer = [];
 
 for (const cardAction of cardActions) {
-    const quantity = cardAction.children[0].children[1];
-    const addToCartBtn = cardAction.children[1];
-    const price = cardAction.parentElement.children[1];
-    const productName = cardAction.parentElement.children[0].innerText;
+    const quantity = cardAction.querySelector('.product-count');
+    const addToCartBtn = cardAction.querySelector('.btn');
+    const price = cardAction.parentElement.querySelector('.product-price');
+    const productName = cardAction.parentElement.querySelector('.card-title').innerText;
     addToCartBtn.addEventListener('click', function () {
         const productQuantity = parseInt(quantity.innerText);
+        quantity.innerText = 0;
         if (productQuantity === 0) {
             alert("Please select a quantity first!");
             return;
@@ -59,7 +60,7 @@ for (const cardAction of cardActions) {
         for (const productPrice of priceContainer) {
             finalPrice += productPrice;
         }
-        totalPriceContainer.children[1].innerText = finalQuantity;
-        totalPriceContainer.children[2].innerText = finalPrice;
+        totalPriceContainer.querySelector('#total-quantity').innerText = finalQuantity;
+        totalPriceContainer.querySelector('#final-price').innerText = finalPrice;
     })
 }
